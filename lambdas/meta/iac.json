@@ -1,0 +1,18 @@
+{
+  "$schema": "../../.endaft/schemas/iac.lambda.schema.json",
+  "description": "The API handler for meta.",
+  "anonymous": false,
+  "environment": null,
+  "handler": "bootstrap",
+  "runtime": "provided.al2",
+  "architecture": "arm64",
+  "file": "../.dist/lambda_meta.zip",
+  "memory": 128,
+  "timeout": 30,
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/meta"
+    }
+  ]
+}

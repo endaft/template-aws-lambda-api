@@ -1,0 +1,44 @@
+{
+  "$schema": "../.endaft/schemas/iac.shared.schema.json",
+  "app_name": "My Great App",
+  "app_domain": "lifeevents.app",
+  "local_dev_endpoint": "http://localhost:19006",
+  "log_retention_days": 14,
+  "web_apps": {
+    "www": "../web",
+    "admin": "../app/build/web"
+  },
+  "cognito": {
+    "enabled": true,
+    "password_rules": {
+      "minimum_length": 10,
+      "require_numbers": true,
+      "require_symbols": true,
+      "require_lowercase": true,
+      "require_uppercase": true
+    },
+    "token_validity": {
+      "id_token": {
+        "duration": 60,
+        "units": "minutes"
+      },
+      "access_token": {
+        "duration": 60,
+        "units": "minutes"
+      },
+      "refresh_token": {
+        "duration": 1,
+        "units": "days"
+      }
+    }
+  },
+  "request_params": {
+    "append:header.X-User-Id": "$context.authorizer.claims.sub",
+    "append:header.X-User-Username": "$context.authorizer.preferred_username",
+    "append:header.X-User-GivenName": "$context.authorizer.given_name",
+    "append:header.X-User-FamilyName": "$context.authorizer.family_name",
+    "append:header.X-User-Email": "$context.authorizer.email",
+    "append:header.X-User-Picture": "$context.authorizer.picture",
+    "append:header.X-User-LastUpdated": "$context.authorizer.updated_at"
+  }
+}
