@@ -1,6 +1,5 @@
 import 'package:test/test.dart';
 import 'package:app_shared/client.dart';
-import 'package:endaft_core/extras.dart';
 
 import '../utils.dart';
 
