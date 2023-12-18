@@ -5,19 +5,19 @@ homepage: https://my-great.app
 publish_to: none
 
 environment:
-  sdk: ">=2.18.0 <3.0.0"
+  sdk: '>=3.1.2 <4.0.0'
 
 dependencies:
-  json_annotation: ^4.6.0
-  aws_dynamodb_api: ^1.2.0
+  json_annotation: ^4.8.1
+  aws_dynamodb_api: ^2.0.0
   aws_lambda_dart_runtime: ^1.1.0
   app_shared:
     path: ../../shared
 
 dev_dependencies:
-  test: ^1.21.5
-  lints: ^2.0.0
-  mocktail: ^0.3.0
-  analyzer: ^4.7.0
-  build_runner: ^2.2.0
-  json_serializable: ^6.3.1
+  test: ^1.25.0
+  lints: ^3.0.0
+  mocktail: ^1.0.2
+  analyzer: ^6.3.0
+  build_runner: ^2.4.7
+  json_serializable: ^6.7.1
