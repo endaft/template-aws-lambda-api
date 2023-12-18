@@ -35,9 +35,9 @@ class GetTodosResponse extends ResponseBase {
   GetTodosResponse({
     required this.todos,
     this.token,
-    bool error = false,
-    List<String> messages = const [],
-  }) : super(error: error, messages: messages);
+    super.error,
+    super.messages,
+  });
 
   final String? token;
   final List<Todo> todos;
@@ -74,9 +74,9 @@ class WriteTodosRequest extends RequestBase {
 class WriteTodosResponse extends ResponseBase {
   WriteTodosResponse({
     this.failedKeys = const [],
-    bool error = false,
-    List<String> messages = const [],
-  }) : super(error: error, messages: messages);
+    super.error,
+    super.messages,
+  });
 
   final List<String> failedKeys;
 
@@ -112,9 +112,9 @@ class DeleteTodosRequest extends RequestBase {
 class DeleteTodosResponse extends ResponseBase {
   DeleteTodosResponse({
     this.failedKeys = const [],
-    bool error = false,
-    List<String> messages = const [],
-  }) : super(error: error, messages: messages);
+    super.error,
+    super.messages,
+  });
 
   final List<String> failedKeys;
 

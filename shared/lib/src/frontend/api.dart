@@ -1,14 +1,12 @@
 import 'dart:async';
 
-import 'package:http/http.dart' as http;
 import 'package:endaft_core/client.dart';
 
 import 'config.dart';
 import '../messages/all.dart';
 
 class AppApi extends BaseAppApi<ClientConfig> {
-  AppApi({required ClientConfig config, required http.Client httpClient})
-      : super(config: config, httpClient: httpClient);
+  AppApi({required super.config, required super.httpClient});
 
   Future<GetTodosResponse?> getTodos({
     int count = defaultTodoCount,

@@ -25,10 +25,10 @@ class GetMetaRequest extends RequestBase {
 @JsonSerializable()
 class GetMetaResponse extends ResponseBase {
   GetMetaResponse({
-    bool error = false,
-    List<String> messages = const [],
+    super.error,
+    super.messages,
     required this.meta,
-  }) : super(error: error, messages: messages);
+  });
 
   final DeploymentCost meta;
 

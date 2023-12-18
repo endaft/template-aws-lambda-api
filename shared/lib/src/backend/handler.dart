@@ -1,5 +1,4 @@
 import 'package:app_shared/server.dart';
-import 'package:http/http.dart' as http;
 
 import 'clients/finance.dart';
 import 'clients/document_db.dart';
@@ -7,9 +6,9 @@ import 'clients/document_db.dart';
 class AppApiHandler extends BaseAppApiHandler<ServerConfig> {
   AppApiHandler({
     required DocumentDbClient db,
-    required ServerConfig config,
-    required http.Client httpClient,
-  }) : super(config: config, httpClient: httpClient) {
+    required super.config,
+    required super.httpClient,
+  }) {
     _db = db;
   }
 
