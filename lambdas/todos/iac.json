@@ -3,7 +3,7 @@
   "description": "The API handler for todos.",
   "anonymous": false,
   "handler": "bootstrap",
-  "runtime": "provided.al2",
+  "runtime": "provided.al2023",
   "architecture": "arm64",
   "file": "../.dist/lambda_todos.zip",
   "memory": 128,
